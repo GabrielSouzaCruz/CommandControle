@@ -10,7 +10,7 @@ public class MacroCommand implements Command {
 
     @Override
     public void execute() {
-        System.out.println("--- Iniciando Modo Cinema (COM Command) ---");
+        System.out.println("--- Iniciando Modo Cinema ---");
         for (Command c : comandos) {
             c.execute();
         }
@@ -18,7 +18,7 @@ public class MacroCommand implements Command {
 
     @Override
     public void undo() {
-        System.out.println("--- Desfazendo Modo Cinema ---");
+        System.out.println("\n--- Desfazendo Modo Cinema ---");
         for (int i = comandos.length - 1; i >= 0; i--) {
             comandos[i].undo();
         }

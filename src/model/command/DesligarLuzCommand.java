@@ -3,20 +3,20 @@ package model.command;
 import model.receiver.Luz;
 
 //Comando concreto
-public class LigarLuzCommand implements Command {
+public class DesligarLuzCommand implements Command {
  private Luz luz;
 
- public LigarLuzCommand(Luz luz) {
+ public DesligarLuzCommand(Luz luz) {
      this.luz = luz;
  }
 
  @Override
  public void execute() {
-	 luz.ligar();
+	 luz.desligar();
  }
 
  @Override
  public void undo() {
-     luz.desligar();
+     luz.ligar();
  }
 }
